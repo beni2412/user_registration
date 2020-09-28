@@ -73,7 +73,7 @@ public class UserRegistration {
 		for(int i=0;;) {
 			System.out.println("Enter password: \n(min. 8 char)");
 			String password = sc.nextLine();
-			Pattern pattern =Pattern.compile("[a-zA-z0-9]{8,}");
+			Pattern pattern =Pattern.compile("(?=.*[A-Z])([a-zA-Z0-9]){8,}");
 			Matcher matcher = pattern.matcher(password);
 			boolean matchfound = matcher.find();
 			
