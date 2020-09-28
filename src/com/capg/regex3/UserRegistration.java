@@ -46,11 +46,27 @@ public class UserRegistration {
 			boolean matchfound = matcher.find();
 			
 			if(matchfound) {
-				System.out.println("Correct entry");
 				break;
 			}
 			else {
 				System.out.println("Invalid email ");
+				
+			
+			}
+			}
+		for(int i=0;;) {
+			System.out.println("Enter phone number: ");
+			String phoneNumber = sc.nextLine();
+			Pattern pattern =Pattern.compile("^[1-9]{1}[0-9]{1} [1-9]{1}[0-9]{9}");
+			Matcher matcher = pattern.matcher(phoneNumber);
+			boolean matchfound = matcher.find();
+			
+			if(matchfound) {
+				System.out.println("Correct entry");
+				break;
+			}
+			else {
+				System.out.println("Invalid number (Enter in this format: 91 9919819801) ");
 				
 			
 			}
