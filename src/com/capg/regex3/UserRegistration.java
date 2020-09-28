@@ -62,11 +62,27 @@ public class UserRegistration {
 			boolean matchfound = matcher.find();
 			
 			if(matchfound) {
-				System.out.println("Correct entry");
 				break;
 			}
 			else {
 				System.out.println("Invalid number (Enter in this format: 91 9919819801) ");
+				
+			
+			}
+			}
+		for(int i=0;;) {
+			System.out.println("Enter password: \n(min. 8 char)");
+			String password = sc.nextLine();
+			Pattern pattern =Pattern.compile("[a-zA-z0-9]{8,}");
+			Matcher matcher = pattern.matcher(password);
+			boolean matchfound = matcher.find();
+			
+			if(matchfound) {
+				System.out.println("Correct entry");
+				break;
+			}
+			else {
+				System.out.println("Invalid password ");
 				
 			
 			}
